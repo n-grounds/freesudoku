@@ -11,9 +11,7 @@ https://docs.nativescript.org/ui/professional-ui-components/SideDrawer/getting-s
     <nsDrawer:RadSideDrawer.drawerContent>
         <GridLayout rows="auto, *" class="nt-drawer__content">
             <StackLayout class="nt-drawer__header">
-                <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;" />
-                <Label class="nt-drawer__header-brand" text="User Name" />
-                <Label class="nt-drawer__header-footnote" text="username@mail.com" />
+                <Image class="nt-drawer__header-image" src="res://icon" />
             </StackLayout>
 
             <ScrollView row="1" class="nt-drawer__body">

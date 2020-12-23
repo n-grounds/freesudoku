@@ -21,8 +21,10 @@
         <Label text="Settings"></Label>
     </ActionBar>
 
-    <GridLayout class="page__content">
-        <Label class="page__content-icon fas" text="&#xf013;"></Label>
-        <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
+    <GridLayout class="page__content" columns="*" rows="auto,auto">
+        <Label row="0" class="page__content-icon m-t-20 fas" text="&#xf013;"></Label>
+        <Label row="1" class="body p-10 text-primary" textWrap="true"
+            text="App icon made by Freepik at www.flaticon.com"></Label>
     </GridLayout>
 </Page>
+ 

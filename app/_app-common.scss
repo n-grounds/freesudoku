@@ -1,5 +1,5 @@
 @import "~@nativescript/theme/core";
-@import "~@nativescript/theme/blue";
+@import "~@nativescript/theme/forest";
 
 // Place any CSS rules you want to apply on both iOS and Android here.
 // This is where the vast majority of your CSS code goes.
@@ -24,7 +24,7 @@
 .page__content {
     &-icon,
     &-placeholder {
-        color: const(grey);
+        // color: const(grey);
         font-size: 20;
         vertical-align: center;
         horizontal-align: center;
@@ -33,11 +33,16 @@
     &-icon {
         font-size: 72;
         vertical-align: top;
-        margin-top: 20%;
+        // margin-top: 20%;
     }
 }
 
 // Drawer navigation custom styles
 .nt-drawer__header-image {
     color: const(grey);
+    background-color: const(white);
+}
+
+.body {
+    font-size: 20;
 }
