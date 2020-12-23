@@ -1,0 +1,31 @@
+{
+  "nativescript": {
+    "id": "org.nativescript.freesudoku2",
+    "tns-android": {
+      "version": "6.3.1"
+    },
+    "tns-ios": {
+      "version": "6.3.0"
+    }
+  },
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "scripts": {
+    "lint": "tslint \"app/**/*.ts\""
+  },
+  "dependencies": {
+    "@nativescript/theme": "~2.2.1",
+    "nativescript-ui-sidedrawer": "~8.0.0",
+    "rxjs": "^6.4.0",
+    "tns-core-modules": "~6.3.0"
+  },
+  "devDependencies": {
+    "nativescript-dev-webpack": "~1.4.0",
+    "node-sass": "^4.7.1",
+    "tslint": "~5.19.0",
+    "typescript": "~3.5.3"
+  },
+  "gitHead": "fa98f785df3fba482e5e2a0c76f4be1fa6dc7a14",
+  "readme": "NativeScript Application"
+}
