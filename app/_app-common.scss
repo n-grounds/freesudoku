@@ -46,3 +46,22 @@
 .body {
     font-size: 20;
 }
+
+.b-r-1 {
+    border-color: black;
+    border-width: 0 1 0 0;
+}
+
+.b-b-1 {
+    border-color: black;
+    border-width: 0 0 1 0;
+}
+
+.b-br-1 {
+    border-color: black;
+    border-width: 0 1 1 0;
+}
+
+.selected {
+    background-color: pink;
+}

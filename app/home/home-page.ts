@@ -20,6 +20,7 @@ export function onDrawerButtonTap(args: EventData) {
 export function playCasual(args: EventData) {
     console.log(`Playing casual game: ${args}`);
     console.log(`Will navigate away from ${Frame.topmost().currentPage}`);
+    Frame.topmost().navigate('game/game-page');
 }
 
 export function playTimed(args: EventData) {

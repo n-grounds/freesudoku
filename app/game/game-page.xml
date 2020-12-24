@@ -1,0 +1,114 @@
+<Page
+    navigatingTo="onNavigatingTo"
+    loaded="onLoaded"
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar>
+        <!-- 
+        Use the NavigationButton as a side-drawer button in Android
+        because ActionItems are shown on the right side of the ActionBar
+        -->
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+        <!-- 
+        Use the ActionItem for IOS with position set to left. Using the
+        NavigationButton as a side-drawer button in iOS is not possible,
+        because its function is to always navigate back in the application.
+        -->
+        <ActionItem icon="res://menu" 
+            android:visibility="collapsed" 
+            tap="onDrawerButtonTap"
+            ios.position="left">
+        </ActionItem>
+        <Label text="Home"></Label>
+    </ActionBar>
+
+    <GridLayout class="page__content" columns="*,*,*" rows="auto,auto,auto">
+        <GridLayout id="board" row="0" colSpan="3"
+            columns="*,*,*,*,*,*,*,*,*"
+            rows="auto,auto,auto,auto,auto,auto,auto,auto,auto">
+            <Label row="0" col="0" class="body p-10 text-center" text="1"/>
+            <Label row="0" col="1" class="body p-10 text-center" text="2"/>
+            <Label row="0" col="2" class="body p-10 text-center b-r-1" text="3"/>
+            <Label row="0" col="3" class="body p-10 text-center" text="4"/>
+            <Label row="0" col="4" class="body p-10 text-center" text="5"/>
+            <Label row="0" col="5" class="body p-10 text-center b-r-1" text="6"/>
+            <Label row="0" col="6" class="body p-10 text-center" text="7"/>
+            <Label row="0" col="7" class="body p-10 text-center" text="8"/>
+            <Label row="0" col="8" class="body p-10 text-center" text="9"/>
+            <Label row="1" col="0" class="body p-10 text-center" text="4"/>
+            <Label row="1" col="1" class="body p-10 text-center" text="5"/>
+            <Label row="1" col="2" class="body p-10 text-center b-r-1" text="6"/>
+            <Label row="1" col="3" class="body p-10 text-center" text="7"/>
+            <Label row="1" col="4" class="body p-10 text-center" text="8"/>
+            <Label row="1" col="5" class="body p-10 text-center b-r-1" text="9"/>
+            <Label row="1" col="6" class="body p-10 text-center" text="1"/>
+            <Label row="1" col="7" class="body p-10 text-center" text="2"/>
+            <Label row="1" col="8" class="body p-10 text-center" text="3"/>
+            <Label row="2" col="0" class="body p-10 text-center b-b-1" text="7"/>
+            <Label row="2" col="1" class="body p-10 text-center b-b-1" text="8"/>
+            <Label row="2" col="2" class="body p-10 text-center b-br-1" text="9"/>
+            <Label row="2" col="3" class="body p-10 text-center b-b-1" text="1"/>
+            <Label row="2" col="4" class="body p-10 text-center b-b-1" text="2"/>
+            <Label row="2" col="5" class="body p-10 text-center b-br-1" text="3"/>
+            <Label row="2" col="6" class="body p-10 text-center b-b-1" text="4"/>
+            <Label row="2" col="7" class="body p-10 text-center b-b-1" text="5"/>
+            <Label row="2" col="8" class="body p-10 text-center b-b-1" text="6"/>
+            <Label row="3" col="0" class="body p-10 text-center" text="2"/>
+            <Label row="3" col="1" class="body p-10 text-center" text="3"/>
+            <Label row="3" col="2" class="body p-10 text-center b-r-1" text="4"/>
+            <Label row="3" col="3" class="body p-10 text-center" text="5"/>
+            <Label row="3" col="4" class="body p-10 text-center" text="6"/>
+            <Label row="3" col="5" class="body p-10 text-center b-r-1" text="7"/>
+            <Label row="3" col="6" class="body p-10 text-center" text="8"/>
+            <Label row="3" col="7" class="body p-10 text-center" text="9"/>
+            <Label row="3" col="8" class="body p-10 text-center" text="1"/>
+            <Label row="4" col="0" class="body p-10 text-center" text="5"/>
+            <Label row="4" col="1" class="body p-10 text-center" text="6"/>
+            <Label row="4" col="2" class="body p-10 text-center b-r-1" text="7"/>
+            <Label row="4" col="3" class="body p-10 text-center" text="8"/>
+            <Label row="4" col="4" class="body p-10 text-center" text="9"/>
+            <Label row="4" col="5" class="body p-10 text-center b-r-1" text="1"/>
+            <Label row="4" col="6" class="body p-10 text-center" text="2"/>
+            <Label row="4" col="7" class="body p-10 text-center" text="3"/>
+            <Label row="4" col="8" class="body p-10 text-center" text="4"/>
+            <Label row="5" col="0" class="body p-10 text-center b-b-1" text="8"/>
+            <Label row="5" col="1" class="body p-10 text-center b-b-1" text="9"/>
+            <Label row="5" col="2" class="body p-10 text-center b-br-1" text="1"/>
+            <Label row="5" col="3" class="body p-10 text-center b-b-1" text="2"/>
+            <Label row="5" col="4" class="body p-10 text-center b-b-1" text="3"/>
+            <Label row="5" col="5" class="body p-10 text-center b-br-1" text="4"/>
+            <Label row="5" col="6" class="body p-10 text-center b-b-1" text="5"/>
+            <Label row="5" col="7" class="body p-10 text-center b-b-1" text="6"/>
+            <Label row="5" col="8" class="body p-10 text-center b-b-1" text="7"/>
+            <Label row="6" col="0" class="body p-10 text-center" text="3"/>
+            <Label row="6" col="1" class="body p-10 text-center" text="4"/>
+            <Label row="6" col="2" class="body p-10 text-center b-r-1" text="5"/>
+            <Label row="6" col="3" class="body p-10 text-center" text="6"/>
+            <Label row="6" col="4" class="body p-10 text-center" text="7"/>
+            <Label row="6" col="5" class="body p-10 text-center b-r-1" text="8"/>
+            <Label row="6" col="6" class="body p-10 text-center" text="9"/>
+            <Label row="6" col="7" class="body p-10 text-center" text="1"/>
+            <Label row="6" col="8" class="body p-10 text-center" text="2"/>
+            <Label row="7" col="0" class="body p-10 text-center" text="6"/>
+            <Label row="7" col="1" class="body p-10 text-center" text="7"/>
+            <Label row="7" col="2" class="body p-10 text-center b-r-1" text="8"/>
+            <Label row="7" col="3" class="body p-10 text-center" text="9"/>
+            <Label row="7" col="4" class="body p-10 text-center" text="1"/>
+            <Label row="7" col="5" class="body p-10 text-center b-r-1" text="2"/>
+            <Label row="7" col="6" class="body p-10 text-center" text="3"/>
+            <Label row="7" col="7" class="body p-10 text-center" text="4"/>
+            <Label row="7" col="8" class="body p-10 text-center" text="5"/>
+            <Label row="8" col="0" class="body p-10 text-center" text="9"/>
+            <Label row="8" col="1" class="body p-10 text-center" text="1"/>
+            <Label row="8" col="2" class="body p-10 text-center b-r-1" text="2"/>
+            <Label row="8" col="3" class="body p-10 text-center" text="3"/>
+            <Label row="8" col="4" class="body p-10 text-center" text="4"/>
+            <Label row="8" col="5" class="body p-10 text-center b-r-1" text="5"/>
+            <Label row="8" col="6" class="body p-10 text-center" text="6"/>
+            <Label row="8" col="7" class="body p-10 text-center" text="7"/>
+            <Label row="8" col="8" class="body p-10 text-center" text="8"/>
+        </GridLayout>
+        <StackLayout class="hr m-10" row="1" colSpan="3" />
+        <Label row="2" colSpan="3" class="text-center body" text="controls, controls" />
+    </GridLayout>
+</Page>
