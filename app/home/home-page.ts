@@ -18,9 +18,18 @@ export function onDrawerButtonTap(args: EventData) {
 }
 
 export function playCasual(args: EventData) {
-    console.log(`Playing casual game: ${args}`);
-    console.log(`Will navigate away from ${Frame.topmost().currentPage}`);
-    Frame.topmost().navigate('game/game-page');
+    Frame.topmost().navigate({
+        moduleName: 'game/game-page',
+        context: { 'game' : '+5,+3,-,-,+7,-,-,-,-,'
+                + '+6,-,-,+1,+9,+5,-,-,-,'
+                + '-,+9,+8,-,-,-,-,+6,-,'
+                + '+8,-,-,-,+6,-,-,-,+3,'
+                + '+4,-,-,+8,-,+3,-,-,+1,'
+                + '+7,-,-,-,+2,-,-,-,+6,'
+                + '-,+6,-,-,-,-,+2,+8,-,'
+                + '-,-,-,+4,+1,+9,-,-,+5,'
+                + '-,-,-,-,+8,-,-,+7,+9' }
+    });
 }
 
 export function playTimed(args: EventData) {

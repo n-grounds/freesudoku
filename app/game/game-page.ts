@@ -9,21 +9,36 @@ import { GameViewModel } from "./game-view-model";
 
 export function onNavigatingTo(args: NavigatedData) {
     const page = <Page>args.object;
+    const context = args.context;
+    const game = context['game'];
     page.bindingContext = new GameViewModel();
 
+    const gameMarkers = game.split(',');
+    for( var i = 0; i < 9; i++ ) {
+        for( var j = 0; j < 9; j++ ) {
+            const c = <string>gameMarkers[i*9+j];
+            if( c[0] == '+' ) {
+                page.bindingContext.solution.getItem(i).setItem(j, c[1]);
+                page.bindingContext.board[i][j] = c[1];
+            }
+            else {
+                page.bindingContext.solution.getItem(i).setItem(j, c[0]);
+            }
+        }
+    }
+
     const board = <GridLayout>page.getViewById('board');
+    var i = 0;
     board.eachChild((cell:ViewBase) => {
+        const cellNumber = i++;
         cell.on('tap', (data:EventData) => {
-            const label = <Label>data.object;
-            console.log(`Label ${label} tapped`);
-            board.eachChild((cell2:ViewBase) => {
-                cell2.className = cell2.className.replace(' selected','');
-                return true;
-            });
-            label.className += " selected";
+            // console.log(`Cell ${cellNumber} '${(<Label>cell).text}' tapped (selected cell is ${page.bindingContext.get('selectedCell')})`);
+            page.bindingContext.set( 'selectedCell', cellNumber );
         });
         return true;
     });
+
+    page.bindingContext.set( 'selectedCell', 40 );
 }
 
 export function onDrawerButtonTap(args: EventData) {

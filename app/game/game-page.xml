@@ -19,94 +19,94 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
-        <Label text="Home"></Label>
+        <Label text="freesudoku"></Label>
     </ActionBar>
 
     <GridLayout class="page__content" columns="*,*,*" rows="auto,auto,auto">
         <GridLayout id="board" row="0" colSpan="3"
             columns="*,*,*,*,*,*,*,*,*"
             rows="auto,auto,auto,auto,auto,auto,auto,auto,auto">
-            <Label row="0" col="0" class="body p-10 text-center" text="1"/>
-            <Label row="0" col="1" class="body p-10 text-center" text="2"/>
-            <Label row="0" col="2" class="body p-10 text-center b-r-1" text="3"/>
-            <Label row="0" col="3" class="body p-10 text-center" text="4"/>
-            <Label row="0" col="4" class="body p-10 text-center" text="5"/>
-            <Label row="0" col="5" class="body p-10 text-center b-r-1" text="6"/>
-            <Label row="0" col="6" class="body p-10 text-center" text="7"/>
-            <Label row="0" col="7" class="body p-10 text-center" text="8"/>
-            <Label row="0" col="8" class="body p-10 text-center" text="9"/>
-            <Label row="1" col="0" class="body p-10 text-center" text="4"/>
-            <Label row="1" col="1" class="body p-10 text-center" text="5"/>
-            <Label row="1" col="2" class="body p-10 text-center b-r-1" text="6"/>
-            <Label row="1" col="3" class="body p-10 text-center" text="7"/>
-            <Label row="1" col="4" class="body p-10 text-center" text="8"/>
-            <Label row="1" col="5" class="body p-10 text-center b-r-1" text="9"/>
-            <Label row="1" col="6" class="body p-10 text-center" text="1"/>
-            <Label row="1" col="7" class="body p-10 text-center" text="2"/>
-            <Label row="1" col="8" class="body p-10 text-center" text="3"/>
-            <Label row="2" col="0" class="body p-10 text-center b-b-1" text="7"/>
-            <Label row="2" col="1" class="body p-10 text-center b-b-1" text="8"/>
-            <Label row="2" col="2" class="body p-10 text-center b-br-1" text="9"/>
-            <Label row="2" col="3" class="body p-10 text-center b-b-1" text="1"/>
-            <Label row="2" col="4" class="body p-10 text-center b-b-1" text="2"/>
-            <Label row="2" col="5" class="body p-10 text-center b-br-1" text="3"/>
-            <Label row="2" col="6" class="body p-10 text-center b-b-1" text="4"/>
-            <Label row="2" col="7" class="body p-10 text-center b-b-1" text="5"/>
-            <Label row="2" col="8" class="body p-10 text-center b-b-1" text="6"/>
-            <Label row="3" col="0" class="body p-10 text-center" text="2"/>
-            <Label row="3" col="1" class="body p-10 text-center" text="3"/>
-            <Label row="3" col="2" class="body p-10 text-center b-r-1" text="4"/>
-            <Label row="3" col="3" class="body p-10 text-center" text="5"/>
-            <Label row="3" col="4" class="body p-10 text-center" text="6"/>
-            <Label row="3" col="5" class="body p-10 text-center b-r-1" text="7"/>
-            <Label row="3" col="6" class="body p-10 text-center" text="8"/>
-            <Label row="3" col="7" class="body p-10 text-center" text="9"/>
-            <Label row="3" col="8" class="body p-10 text-center" text="1"/>
-            <Label row="4" col="0" class="body p-10 text-center" text="5"/>
-            <Label row="4" col="1" class="body p-10 text-center" text="6"/>
-            <Label row="4" col="2" class="body p-10 text-center b-r-1" text="7"/>
-            <Label row="4" col="3" class="body p-10 text-center" text="8"/>
-            <Label row="4" col="4" class="body p-10 text-center" text="9"/>
-            <Label row="4" col="5" class="body p-10 text-center b-r-1" text="1"/>
-            <Label row="4" col="6" class="body p-10 text-center" text="2"/>
-            <Label row="4" col="7" class="body p-10 text-center" text="3"/>
-            <Label row="4" col="8" class="body p-10 text-center" text="4"/>
-            <Label row="5" col="0" class="body p-10 text-center b-b-1" text="8"/>
-            <Label row="5" col="1" class="body p-10 text-center b-b-1" text="9"/>
-            <Label row="5" col="2" class="body p-10 text-center b-br-1" text="1"/>
-            <Label row="5" col="3" class="body p-10 text-center b-b-1" text="2"/>
-            <Label row="5" col="4" class="body p-10 text-center b-b-1" text="3"/>
-            <Label row="5" col="5" class="body p-10 text-center b-br-1" text="4"/>
-            <Label row="5" col="6" class="body p-10 text-center b-b-1" text="5"/>
-            <Label row="5" col="7" class="body p-10 text-center b-b-1" text="6"/>
-            <Label row="5" col="8" class="body p-10 text-center b-b-1" text="7"/>
-            <Label row="6" col="0" class="body p-10 text-center" text="3"/>
-            <Label row="6" col="1" class="body p-10 text-center" text="4"/>
-            <Label row="6" col="2" class="body p-10 text-center b-r-1" text="5"/>
-            <Label row="6" col="3" class="body p-10 text-center" text="6"/>
-            <Label row="6" col="4" class="body p-10 text-center" text="7"/>
-            <Label row="6" col="5" class="body p-10 text-center b-r-1" text="8"/>
-            <Label row="6" col="6" class="body p-10 text-center" text="9"/>
-            <Label row="6" col="7" class="body p-10 text-center" text="1"/>
-            <Label row="6" col="8" class="body p-10 text-center" text="2"/>
-            <Label row="7" col="0" class="body p-10 text-center" text="6"/>
-            <Label row="7" col="1" class="body p-10 text-center" text="7"/>
-            <Label row="7" col="2" class="body p-10 text-center b-r-1" text="8"/>
-            <Label row="7" col="3" class="body p-10 text-center" text="9"/>
-            <Label row="7" col="4" class="body p-10 text-center" text="1"/>
-            <Label row="7" col="5" class="body p-10 text-center b-r-1" text="2"/>
-            <Label row="7" col="6" class="body p-10 text-center" text="3"/>
-            <Label row="7" col="7" class="body p-10 text-center" text="4"/>
-            <Label row="7" col="8" class="body p-10 text-center" text="5"/>
-            <Label row="8" col="0" class="body p-10 text-center" text="9"/>
-            <Label row="8" col="1" class="body p-10 text-center" text="1"/>
-            <Label row="8" col="2" class="body p-10 text-center b-r-1" text="2"/>
-            <Label row="8" col="3" class="body p-10 text-center" text="3"/>
-            <Label row="8" col="4" class="body p-10 text-center" text="4"/>
-            <Label row="8" col="5" class="body p-10 text-center b-r-1" text="5"/>
-            <Label row="8" col="6" class="body p-10 text-center" text="6"/>
-            <Label row="8" col="7" class="body p-10 text-center" text="7"/>
-            <Label row="8" col="8" class="body p-10 text-center" text="8"/>
+            <Label row="0" col="0" class="{{ selectedCell, (selectedCell == 0) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[0][0] }}"/>
+            <Label row="0" col="1" class="{{ selectedCell, (selectedCell == 1) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[0][1] }}"/>
+            <Label row="0" col="2" class="{{ selectedCell, (selectedCell == 2) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[0][2] }}"/>
+            <Label row="0" col="3" class="{{ selectedCell, (selectedCell == 3) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[0][3] }}"/>
+            <Label row="0" col="4" class="{{ selectedCell, (selectedCell == 4) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[0][4] }}"/>
+            <Label row="0" col="5" class="{{ selectedCell, (selectedCell == 5) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[0][5] }}"/>
+            <Label row="0" col="6" class="{{ selectedCell, (selectedCell == 6) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[0][6] }}"/>
+            <Label row="0" col="7" class="{{ selectedCell, (selectedCell == 7) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[0][7] }}"/>
+            <Label row="0" col="8" class="{{ selectedCell, (selectedCell == 8) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[0][8] }}"/>
+            <Label row="1" col="0" class="{{ selectedCell, (selectedCell == 9) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[1][0] }}"/>
+            <Label row="1" col="1" class="{{ selectedCell, (selectedCell == 10) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[1][1] }}"/>
+            <Label row="1" col="2" class="{{ selectedCell, (selectedCell == 11) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[1][2] }}"/>
+            <Label row="1" col="3" class="{{ selectedCell, (selectedCell == 12) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[1][3] }}"/>
+            <Label row="1" col="4" class="{{ selectedCell, (selectedCell == 13) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[1][4] }}"/>
+            <Label row="1" col="5" class="{{ selectedCell, (selectedCell == 14) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[1][5] }}"/>
+            <Label row="1" col="6" class="{{ selectedCell, (selectedCell == 15) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[1][6] }}"/>
+            <Label row="1" col="7" class="{{ selectedCell, (selectedCell == 16) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[1][7] }}"/>
+            <Label row="1" col="8" class="{{ selectedCell, (selectedCell == 17) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[1][8] }}"/>
+            <Label row="2" col="0" class="{{ selectedCell, (selectedCell == 18) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[2][0] }}"/>
+            <Label row="2" col="1" class="{{ selectedCell, (selectedCell == 19) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[2][1] }}"/>
+            <Label row="2" col="2" class="{{ selectedCell, (selectedCell == 20) ? 'body p-10 text-center b-br-1 selected' : 'body p-10 text-center b-br-1' }}" text="{{ board, board[2][2] }}"/>
+            <Label row="2" col="3" class="{{ selectedCell, (selectedCell == 21) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[2][3] }}"/>
+            <Label row="2" col="4" class="{{ selectedCell, (selectedCell == 22) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[2][4] }}"/>
+            <Label row="2" col="5" class="{{ selectedCell, (selectedCell == 23) ? 'body p-10 text-center b-br-1 selected' : 'body p-10 text-center b-br-1' }}" text="{{ board, board[2][5] }}"/>
+            <Label row="2" col="6" class="{{ selectedCell, (selectedCell == 24) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[2][6] }}"/>
+            <Label row="2" col="7" class="{{ selectedCell, (selectedCell == 25) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[2][7] }}"/>
+            <Label row="2" col="8" class="{{ selectedCell, (selectedCell == 26) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[2][8] }}"/>
+            <Label row="3" col="0" class="{{ selectedCell, (selectedCell == 27) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[3][0] }}"/>
+            <Label row="3" col="1" class="{{ selectedCell, (selectedCell == 28) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[3][1] }}"/>
+            <Label row="3" col="2" class="{{ selectedCell, (selectedCell == 29) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[3][2] }}"/>
+            <Label row="3" col="3" class="{{ selectedCell, (selectedCell == 30) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[3][3] }}"/>
+            <Label row="3" col="4" class="{{ selectedCell, (selectedCell == 31) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[3][4] }}"/>
+            <Label row="3" col="5" class="{{ selectedCell, (selectedCell == 32) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[3][5] }}"/>
+            <Label row="3" col="6" class="{{ selectedCell, (selectedCell == 33) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[3][6] }}"/>
+            <Label row="3" col="7" class="{{ selectedCell, (selectedCell == 34) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[3][7] }}"/>
+            <Label row="3" col="8" class="{{ selectedCell, (selectedCell == 35) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[3][8] }}"/>
+            <Label row="4" col="0" class="{{ selectedCell, (selectedCell == 36) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[4][0] }}"/>
+            <Label row="4" col="1" class="{{ selectedCell, (selectedCell == 37) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[4][1] }}"/>
+            <Label row="4" col="2" class="{{ selectedCell, (selectedCell == 38) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[4][2] }}"/>
+            <Label row="4" col="3" class="{{ selectedCell, (selectedCell == 39) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[4][3] }}"/>
+            <Label row="4" col="4" class="{{ selectedCell, (selectedCell == 40) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[4][4] }}"/>
+            <Label row="4" col="5" class="{{ selectedCell, (selectedCell == 41) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[4][5] }}"/>
+            <Label row="4" col="6" class="{{ selectedCell, (selectedCell == 42) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[4][6] }}"/>
+            <Label row="4" col="7" class="{{ selectedCell, (selectedCell == 43) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[4][7] }}"/>
+            <Label row="4" col="8" class="{{ selectedCell, (selectedCell == 44) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[4][8] }}"/>
+            <Label row="5" col="0" class="{{ selectedCell, (selectedCell == 45) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[5][0] }}"/>
+            <Label row="5" col="1" class="{{ selectedCell, (selectedCell == 46) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[5][1] }}"/>
+            <Label row="5" col="2" class="{{ selectedCell, (selectedCell == 47) ? 'body p-10 text-center b-br-1 selected' : 'body p-10 text-center b-br-1' }}" text="{{ board, board[5][2] }}"/>
+            <Label row="5" col="3" class="{{ selectedCell, (selectedCell == 48) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[5][3] }}"/>
+            <Label row="5" col="4" class="{{ selectedCell, (selectedCell == 49) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[5][4] }}"/>
+            <Label row="5" col="5" class="{{ selectedCell, (selectedCell == 50) ? 'body p-10 text-center b-br-1 selected' : 'body p-10 text-center b-br-1' }}" text="{{ board, board[5][5] }}"/>
+            <Label row="5" col="6" class="{{ selectedCell, (selectedCell == 51) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[5][6] }}"/>
+            <Label row="5" col="7" class="{{ selectedCell, (selectedCell == 52) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[5][7] }}"/>
+            <Label row="5" col="8" class="{{ selectedCell, (selectedCell == 53) ? 'body p-10 text-center b-b-1 selected' : 'body p-10 text-center b-b-1' }}" text="{{ board, board[5][8] }}"/>
+            <Label row="6" col="0" class="{{ selectedCell, (selectedCell == 54) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[6][0] }}"/>
+            <Label row="6" col="1" class="{{ selectedCell, (selectedCell == 55) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[6][1] }}"/>
+            <Label row="6" col="2" class="{{ selectedCell, (selectedCell == 56) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[6][2] }}"/>
+            <Label row="6" col="3" class="{{ selectedCell, (selectedCell == 57) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[6][3] }}"/>
+            <Label row="6" col="4" class="{{ selectedCell, (selectedCell == 58) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[6][4] }}"/>
+            <Label row="6" col="5" class="{{ selectedCell, (selectedCell == 59) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[6][5] }}"/>
+            <Label row="6" col="6" class="{{ selectedCell, (selectedCell == 60) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[6][6] }}"/>
+            <Label row="6" col="7" class="{{ selectedCell, (selectedCell == 61) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[6][7] }}"/>
+            <Label row="6" col="8" class="{{ selectedCell, (selectedCell == 62) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[6][8] }}"/>
+            <Label row="7" col="0" class="{{ selectedCell, (selectedCell == 63) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[7][0] }}"/>
+            <Label row="7" col="1" class="{{ selectedCell, (selectedCell == 64) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[7][1] }}"/>
+            <Label row="7" col="2" class="{{ selectedCell, (selectedCell == 65) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[7][2] }}"/>
+            <Label row="7" col="3" class="{{ selectedCell, (selectedCell == 66) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[7][3] }}"/>
+            <Label row="7" col="4" class="{{ selectedCell, (selectedCell == 67) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[7][4] }}"/>
+            <Label row="7" col="5" class="{{ selectedCell, (selectedCell == 68) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[7][5] }}"/>
+            <Label row="7" col="6" class="{{ selectedCell, (selectedCell == 69) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[7][6] }}"/>
+            <Label row="7" col="7" class="{{ selectedCell, (selectedCell == 70) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[7][7] }}"/>
+            <Label row="7" col="8" class="{{ selectedCell, (selectedCell == 71) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[7][8] }}"/>
+            <Label row="8" col="0" class="{{ selectedCell, (selectedCell == 72) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[8][0] }}"/>
+            <Label row="8" col="1" class="{{ selectedCell, (selectedCell == 73) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[8][1] }}"/>
+            <Label row="8" col="2" class="{{ selectedCell, (selectedCell == 74) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[8][2] }}"/>
+            <Label row="8" col="3" class="{{ selectedCell, (selectedCell == 75) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[8][3] }}"/>
+            <Label row="8" col="4" class="{{ selectedCell, (selectedCell == 76) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[8][4] }}"/>
+            <Label row="8" col="5" class="{{ selectedCell, (selectedCell == 77) ? 'body p-10 text-center b-r-1 selected' : 'body p-10 text-center b-r-1' }}" text="{{ board, board[8][5] }}"/>
+            <Label row="8" col="6" class="{{ selectedCell, (selectedCell == 78) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[8][6] }}"/>
+            <Label row="8" col="7" class="{{ selectedCell, (selectedCell == 79) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[8][7] }}"/>
+            <Label row="8" col="8" class="{{ selectedCell, (selectedCell == 80) ? 'body p-10 text-center selected' : 'body p-10 text-center' }}" text="{{ board, board[8][8] }}"/>
         </GridLayout>
         <StackLayout class="hr m-10" row="1" colSpan="3" />
         <Label row="2" colSpan="3" class="text-center body" text="controls, controls" />
