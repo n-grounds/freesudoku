@@ -4,6 +4,8 @@ import { EventData } from "tns-core-modules/data/observable";
 import { NavigatedData, Page, ViewBase } from "tns-core-modules/ui/page";
 import { Label } from "tns-core-modules/ui/label";
 import { GridLayout } from "tns-core-modules/ui/layouts/grid-layout";
+import { alert } from "tns-core-modules/ui/dialogs";
+import { Frame } from "tns-core-modules/ui/frame";
 
 import { GameViewModel } from "./game-view-model";
 
@@ -83,7 +85,14 @@ export function onNavigatingTo(args: NavigatedData) {
                     val = '';
                 }
                 page.bindingContext.board[row][col] = val;
-                //TODO check win condition
+                if( isComplete( page.bindingContext ) ) {
+                    alert( { title: 'You won',
+                             message: 'Congratulations, you won!',
+                             okButtonText: 'Return Home',
+                             cancelable: false } ).then( () => {
+                        Frame.topmost().navigate( 'home/home-page' );
+                    } );
+                }
             }
         });
         return true;
@@ -100,4 +109,15 @@ export function onDrawerButtonTap(args: EventData) {
 export function onLoaded(args: EventData) {
     console.log(`Game page loaded`);
     console.log(args.object);
+}
+
+function isComplete(model: any) {
+    for( var r = 0; r < 9; r++ ) {
+        for( var c = 0; c < 9; c++ ) {
+            if( model.board[r][c] != model.solution[r][c] ) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
