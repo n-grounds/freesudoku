@@ -39,13 +39,10 @@ export function playExpert(args: EventData) {
 
 function play(difficulty: string) {
     const games = <Array<any>>require('../games.json');
-    console.log( `There are ${games.length} games` );
     const options = games.filter( g => g.difficulty == difficulty );
-    console.log( `There are ${options.length} games matching difficulty ${difficulty}` );
     const idx = Math.floor( Math.random() * options.length );
     const selected = options[idx];
     const game = selected.puzzle.join( ',' );
-    console.log( `Randomly selected ${game}` );
     Frame.topmost().navigate({
         moduleName: 'game/game-page',
         context: { 'game' : game,

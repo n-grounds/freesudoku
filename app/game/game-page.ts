@@ -6,13 +6,14 @@ import { Label } from "tns-core-modules/ui/label";
 import { GridLayout } from "tns-core-modules/ui/layouts/grid-layout";
 import { alert } from "tns-core-modules/ui/dialogs";
 import { Frame } from "tns-core-modules/ui/frame";
+import { setInterval, clearInterval } from "tns-core-modules/timer";
 
 import { GameViewModel } from "./game-view-model";
 
 export function onNavigatingTo(args: NavigatedData) {
     const page = <Page>args.object;
     const context = args.context;
-    const game = context['game'];
+    const game = context.game;
     page.bindingContext = new GameViewModel();
 
     const gameMarkers = game.split(',');
@@ -86,8 +87,16 @@ export function onNavigatingTo(args: NavigatedData) {
                 }
                 page.bindingContext.board[row][col] = val;
                 if( isComplete( page.bindingContext ) ) {
+                    if( page.bindingContext.timerId != undefined ) {
+                        clearInterval( page.bindingContext.timerId );
+                    }
+                    var message = 'Congratulations, you won';
+                    if( page.bindingContext.timerVal != undefined ) {
+                        message += ' in ' + formatTime(page.bindingContext.timerVal);
+                    }
+                    message += '!'
                     alert( { title: 'You won',
-                             message: 'Congratulations, you won!',
+                             message: message,
                              okButtonText: 'Return Home',
                              cancelable: false } ).then( () => {
                         Frame.topmost().navigate( 'home/home-page' );
@@ -98,7 +107,34 @@ export function onNavigatingTo(args: NavigatedData) {
         return true;
     });
 
+    if( context.type == 'timed' ) {
+        const timer = <Label>page.getViewById('timer');
+        const start = Date.now();
+        timer.text = formatTime((Date.now() - start) / 1000);
+        const updateTimer = () => {
+            const secs = (Date.now() - start) / 1000;
+            page.bindingContext.timerVal = secs;
+            timer.text = formatTime(secs);
+        };
+        page.bindingContext.timerId = setInterval( updateTimer, 1000 );
+    }
+
     page.bindingContext.set( 'selectedCell', 40 );
+}
+
+function formatTime(seconds: number) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    var result = '';;
+    if( mins < 10 ) {
+        result += '0';
+    }
+    result += mins + ':';
+    if( secs < 10 ) {
+        result += '0';
+    }
+    result += secs;
+    return result;
 }
 
 export function onDrawerButtonTap(args: EventData) {

@@ -41,5 +41,7 @@ export class GameViewModel extends Observable {
                 ['', '', '', '', '', '', '', '', ''],
                 ['', '', '', '', '', '', '', '', ''] ] );
         this.set('markers', ['1','2','3','4','5','6','7','8','9']);
+        this.set('timerId', undefined);
+        this.set('timerVal', undefined);
     }
 }

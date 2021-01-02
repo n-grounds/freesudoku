@@ -109,6 +109,9 @@
             <Label row="8" col="8" text=""/>
         </GridLayout>
         <StackLayout class="hr m-10" row="1" colSpan="3" />
+        <StackLayout row="2" col="0">
+            <Label class="body p-10" text="" id="timer" />
+        </StackLayout>
         <GridLayout rows="auto,auto,auto" columns="auto,auto,auto" row="2" col="1" id="controls">
             <Label row="0" col="0" class="body p-10 text-center" text="{{ markers, markers[0] }}"/>
             <Label row="0" col="1" class="body p-10 text-center" text="{{ markers, markers[1] }}"/>

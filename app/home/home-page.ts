@@ -9,7 +9,6 @@ import { HomeViewModel } from "./home-view-model";
 export function onNavigatingTo(args: NavigatedData) {
     const page = <Page>args.object;
     page.bindingContext = new HomeViewModel();
-    page.getViewById('timedPlay').set('isEnabled',false);
     page.getViewById('adventurePlay').set('isEnabled',false);
 }
 
@@ -26,7 +25,10 @@ export function playCasual(args: EventData) {
 }
 
 export function playTimed(args: EventData) {
-    console.log(`Playing timed game: ${args}`);
+    Frame.topmost().navigate({
+        moduleName: 'difficulty/difficulty-page',
+        context: { 'type' : 'timed' }
+    });
 }
 
 export function playAdventure(args: EventData) {
