@@ -60,6 +60,9 @@ export function onNavigatingTo(args: NavigatedData) {
         else if( col == 2 || col == 5 ) {
             nClass += ' b-r-1';
         }
+        if( page.bindingContext.fixed[row][col] ) {
+            nClass += ' fixed';
+        }
         const sel = `selectedCell == ${cellNumber}`,
             v = `board[${row}][${col}]`,
             exp = `solution[${row}][${col}]`,
