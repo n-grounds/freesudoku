@@ -22,106 +22,109 @@
         <Label text="freesudoku"></Label>
     </ActionBar>
 
-    <GridLayout class="page__content" columns="*,auto,*" rows="auto,auto,auto">
-        <GridLayout id="board" row="0" colSpan="3"
-            columns="*,*,*,*,*,*,*,*,*"
-            rows="auto,auto,auto,auto,auto,auto,auto,auto,auto">
-            <Label row="0" col="0" text=""/>
-            <Label row="0" col="1" text=""/>
-            <Label row="0" col="2" text=""/>
-            <Label row="0" col="3" text=""/>
-            <Label row="0" col="4" text=""/>
-            <Label row="0" col="5" text=""/>
-            <Label row="0" col="6" text=""/>
-            <Label row="0" col="7" text=""/>
-            <Label row="0" col="8" text=""/>
-            <Label row="1" col="0" text=""/>
-            <Label row="1" col="1" text=""/>
-            <Label row="1" col="2" text=""/>
-            <Label row="1" col="3" text=""/>
-            <Label row="1" col="4" text=""/>
-            <Label row="1" col="5" text=""/>
-            <Label row="1" col="6" text=""/>
-            <Label row="1" col="7" text=""/>
-            <Label row="1" col="8" text=""/>
-            <Label row="2" col="0" text=""/>
-            <Label row="2" col="1" text=""/>
-            <Label row="2" col="2" text=""/>
-            <Label row="2" col="3" text=""/>
-            <Label row="2" col="4" text=""/>
-            <Label row="2" col="5" text=""/>
-            <Label row="2" col="6" text=""/>
-            <Label row="2" col="7" text=""/>
-            <Label row="2" col="8" text=""/>
-            <Label row="3" col="0" text=""/>
-            <Label row="3" col="1" text=""/>
-            <Label row="3" col="2" text=""/>
-            <Label row="3" col="3" text=""/>
-            <Label row="3" col="4" text=""/>
-            <Label row="3" col="5" text=""/>
-            <Label row="3" col="6" text=""/>
-            <Label row="3" col="7" text=""/>
-            <Label row="3" col="8" text=""/>
-            <Label row="4" col="0" text=""/>
-            <Label row="4" col="1" text=""/>
-            <Label row="4" col="2" text=""/>
-            <Label row="4" col="3" text=""/>
-            <Label row="4" col="4" text=""/>
-            <Label row="4" col="5" text=""/>
-            <Label row="4" col="6" text=""/>
-            <Label row="4" col="7" text=""/>
-            <Label row="4" col="8" text=""/>
-            <Label row="5" col="0" text=""/>
-            <Label row="5" col="1" text=""/>
-            <Label row="5" col="2" text=""/>
-            <Label row="5" col="3" text=""/>
-            <Label row="5" col="4" text=""/>
-            <Label row="5" col="5" text=""/>
-            <Label row="5" col="6" text=""/>
-            <Label row="5" col="7" text=""/>
-            <Label row="5" col="8" text=""/>
-            <Label row="6" col="0" text=""/>
-            <Label row="6" col="1" text=""/>
-            <Label row="6" col="2" text=""/>
-            <Label row="6" col="3" text=""/>
-            <Label row="6" col="4" text=""/>
-            <Label row="6" col="5" text=""/>
-            <Label row="6" col="6" text=""/>
-            <Label row="6" col="7" text=""/>
-            <Label row="6" col="8" text=""/>
-            <Label row="7" col="0" text=""/>
-            <Label row="7" col="1" text=""/>
-            <Label row="7" col="2" text=""/>
-            <Label row="7" col="3" text=""/>
-            <Label row="7" col="4" text=""/>
-            <Label row="7" col="5" text=""/>
-            <Label row="7" col="6" text=""/>
-            <Label row="7" col="7" text=""/>
-            <Label row="7" col="8" text=""/>
-            <Label row="8" col="0" text=""/>
-            <Label row="8" col="1" text=""/>
-            <Label row="8" col="2" text=""/>
-            <Label row="8" col="3" text=""/>
-            <Label row="8" col="4" text=""/>
-            <Label row="8" col="5" text=""/>
-            <Label row="8" col="6" text=""/>
-            <Label row="8" col="7" text=""/>
-            <Label row="8" col="8" text=""/>
+    <ScrollView orientation="vertical">
+        <GridLayout class="page__content" columns="*,auto,*" rows="3*,auto,*">
+            <GridLayout id="board" row="0" colSpan="3"
+                class="m-5"
+                columns="*,*,*,*,*,*,*,*,*"
+                rows="*,*,*,*,*,*,*,*,*">
+                <Label row="0" col="0" text=""/>
+                <Label row="0" col="1" text=""/>
+                <Label row="0" col="2" text=""/>
+                <Label row="0" col="3" text=""/>
+                <Label row="0" col="4" text=""/>
+                <Label row="0" col="5" text=""/>
+                <Label row="0" col="6" text=""/>
+                <Label row="0" col="7" text=""/>
+                <Label row="0" col="8" text=""/>
+                <Label row="1" col="0" text=""/>
+                <Label row="1" col="1" text=""/>
+                <Label row="1" col="2" text=""/>
+                <Label row="1" col="3" text=""/>
+                <Label row="1" col="4" text=""/>
+                <Label row="1" col="5" text=""/>
+                <Label row="1" col="6" text=""/>
+                <Label row="1" col="7" text=""/>
+                <Label row="1" col="8" text=""/>
+                <Label row="2" col="0" text=""/>
+                <Label row="2" col="1" text=""/>
+                <Label row="2" col="2" text=""/>
+                <Label row="2" col="3" text=""/>
+                <Label row="2" col="4" text=""/>
+                <Label row="2" col="5" text=""/>
+                <Label row="2" col="6" text=""/>
+                <Label row="2" col="7" text=""/>
+                <Label row="2" col="8" text=""/>
+                <Label row="3" col="0" text=""/>
+                <Label row="3" col="1" text=""/>
+                <Label row="3" col="2" text=""/>
+                <Label row="3" col="3" text=""/>
+                <Label row="3" col="4" text=""/>
+                <Label row="3" col="5" text=""/>
+                <Label row="3" col="6" text=""/>
+                <Label row="3" col="7" text=""/>
+                <Label row="3" col="8" text=""/>
+                <Label row="4" col="0" text=""/>
+                <Label row="4" col="1" text=""/>
+                <Label row="4" col="2" text=""/>
+                <Label row="4" col="3" text=""/>
+                <Label row="4" col="4" text=""/>
+                <Label row="4" col="5" text=""/>
+                <Label row="4" col="6" text=""/>
+                <Label row="4" col="7" text=""/>
+                <Label row="4" col="8" text=""/>
+                <Label row="5" col="0" text=""/>
+                <Label row="5" col="1" text=""/>
+                <Label row="5" col="2" text=""/>
+                <Label row="5" col="3" text=""/>
+                <Label row="5" col="4" text=""/>
+                <Label row="5" col="5" text=""/>
+                <Label row="5" col="6" text=""/>
+                <Label row="5" col="7" text=""/>
+                <Label row="5" col="8" text=""/>
+                <Label row="6" col="0" text=""/>
+                <Label row="6" col="1" text=""/>
+                <Label row="6" col="2" text=""/>
+                <Label row="6" col="3" text=""/>
+                <Label row="6" col="4" text=""/>
+                <Label row="6" col="5" text=""/>
+                <Label row="6" col="6" text=""/>
+                <Label row="6" col="7" text=""/>
+                <Label row="6" col="8" text=""/>
+                <Label row="7" col="0" text=""/>
+                <Label row="7" col="1" text=""/>
+                <Label row="7" col="2" text=""/>
+                <Label row="7" col="3" text=""/>
+                <Label row="7" col="4" text=""/>
+                <Label row="7" col="5" text=""/>
+                <Label row="7" col="6" text=""/>
+                <Label row="7" col="7" text=""/>
+                <Label row="7" col="8" text=""/>
+                <Label row="8" col="0" text=""/>
+                <Label row="8" col="1" text=""/>
+                <Label row="8" col="2" text=""/>
+                <Label row="8" col="3" text=""/>
+                <Label row="8" col="4" text=""/>
+                <Label row="8" col="5" text=""/>
+                <Label row="8" col="6" text=""/>
+                <Label row="8" col="7" text=""/>
+                <Label row="8" col="8" text=""/>
+            </GridLayout>
+            <StackLayout class="hr m-10" row="1" colSpan="3" />
+            <StackLayout row="2" col="0">
+                <Label class="body p-10" text="" id="timer" />
+            </StackLayout>
+            <GridLayout rows="auto,auto,auto" columns="auto,auto,auto" row="2" col="1" id="controls">
+                <Label row="0" col="0" class="body p-10 text-center" text="{{ markers, markers[0] }}"/>
+                <Label row="0" col="1" class="body p-10 text-center" text="{{ markers, markers[1] }}"/>
+                <Label row="0" col="2" class="body p-10 text-center" text="{{ markers, markers[2] }}"/>
+                <Label row="1" col="0" class="body p-10 text-center" text="{{ markers, markers[3] }}"/>
+                <Label row="1" col="1" class="body p-10 text-center" text="{{ markers, markers[4] }}"/>
+                <Label row="1" col="2" class="body p-10 text-center" text="{{ markers, markers[5] }}"/>
+                <Label row="2" col="0" class="body p-10 text-center" text="{{ markers, markers[6] }}"/>
+                <Label row="2" col="1" class="body p-10 text-center" text="{{ markers, markers[7] }}"/>
+                <Label row="2" col="2" class="body p-10 text-center" text="{{ markers, markers[8] }}"/>
+            </GridLayout>
         </GridLayout>
-        <StackLayout class="hr m-10" row="1" colSpan="3" />
-        <StackLayout row="2" col="0">
-            <Label class="body p-10" text="" id="timer" />
-        </StackLayout>
-        <GridLayout rows="auto,auto,auto" columns="auto,auto,auto" row="2" col="1" id="controls">
-            <Label row="0" col="0" class="body p-10 text-center" text="{{ markers, markers[0] }}"/>
-            <Label row="0" col="1" class="body p-10 text-center" text="{{ markers, markers[1] }}"/>
-            <Label row="0" col="2" class="body p-10 text-center" text="{{ markers, markers[2] }}"/>
-            <Label row="1" col="0" class="body p-10 text-center" text="{{ markers, markers[3] }}"/>
-            <Label row="1" col="1" class="body p-10 text-center" text="{{ markers, markers[4] }}"/>
-            <Label row="1" col="2" class="body p-10 text-center" text="{{ markers, markers[5] }}"/>
-            <Label row="2" col="0" class="body p-10 text-center" text="{{ markers, markers[6] }}"/>
-            <Label row="2" col="1" class="body p-10 text-center" text="{{ markers, markers[7] }}"/>
-            <Label row="2" col="2" class="body p-10 text-center" text="{{ markers, markers[8] }}"/>
-        </GridLayout>
-    </GridLayout>
+    </ScrollView>
 </Page>

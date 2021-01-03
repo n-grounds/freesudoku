@@ -7,6 +7,8 @@ import { GridLayout } from "tns-core-modules/ui/layouts/grid-layout";
 import { alert } from "tns-core-modules/ui/dialogs";
 import { Frame } from "tns-core-modules/ui/frame";
 import { setInterval, clearInterval } from "tns-core-modules/timer";
+import { screen } from "tns-core-modules/platform";
+import { PercentLength } from "tns-core-modules/ui/styling/style-properties";
 
 import { GameViewModel } from "./game-view-model";
 
@@ -14,7 +16,7 @@ export function onNavigatingTo(args: NavigatedData) {
     const page = <Page>args.object;
     const context = args.context;
     const game = context.game;
-    page.bindingContext = new GameViewModel();
+    page.bindingContext = new GameViewModel(context.type);
 
     const gameMarkers = game.split(',');
     for( var i = 0; i < 9; i++ ) {
@@ -31,6 +33,10 @@ export function onNavigatingTo(args: NavigatedData) {
         }
     }
 
+    var idealFontSize = Math.floor(Math.min(
+        screen.mainScreen.widthDIPs,
+        screen.mainScreen.heightDIPs) / 18);
+
     const board = <GridLayout>page.getViewById('board');
     var i = 0;
     board.eachChild((cell:ViewBase) => {
@@ -42,7 +48,7 @@ export function onNavigatingTo(args: NavigatedData) {
                   targetProperty: 'text',
                   twoWay: false },
                 page.bindingContext.board[row] );
-        var nClass = 'body p-10 text-center';
+        var nClass = 'p-10 text-center';
         if( row == 2 || row == 5 ) {
             if( col == 2 || col == 5 ) {
                 nClass += ' b-br-1';
@@ -69,13 +75,18 @@ export function onNavigatingTo(args: NavigatedData) {
         cell.on('tap', (data:EventData) => {
             page.bindingContext.set( 'selectedCell', cellNumber );
         });
+        cell.style.fontSize = idealFontSize;
         return true;
     });
+    board.height = PercentLength.parse('' + Math.floor(Math.min(
+            screen.mainScreen.widthDIPs,
+            screen.mainScreen.heightDIPs)));
 
     const controls = <GridLayout>page.getViewById('controls');
     i = 0;
     controls.eachChild((cell:ViewBase) => {
         const controlNumber = i++;
+        cell.style.fontSize = idealFontSize;
         cell.on('tap', (data:EventData) => {
             const selected = page.bindingContext.get( 'selectedCell' );
             const row = Math.floor( selected / 9 );
@@ -143,8 +154,7 @@ export function onDrawerButtonTap(args: EventData) {
 }
 
 export function onLoaded(args: EventData) {
-    console.log(`Game page loaded`);
-    console.log(args.object);
+    
 }
 
 function isComplete(model: any) {

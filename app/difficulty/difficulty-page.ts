@@ -3,7 +3,6 @@ import * as app from "tns-core-modules/application";
 import { EventData, fromObject } from "tns-core-modules/data/observable";
 import { NavigatedData, Page } from "tns-core-modules/ui/page";
 import { Frame } from "tns-core-modules/ui/frame";
-import { knownFolders, path, File, Folder } from "tns-core-modules/file-system";
 
 export function onNavigatingTo(args: NavigatedData) {
     const page = <Page>args.object;

@@ -10,6 +10,7 @@ export function onNavigatingTo(args: NavigatedData) {
     const page = <Page>args.object;
     page.bindingContext = new HomeViewModel();
     page.getViewById('adventurePlay').set('isEnabled',false);
+    
 }
 
 export function onDrawerButtonTap(args: EventData) {

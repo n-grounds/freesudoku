@@ -15,6 +15,7 @@ export function onNavigationItemTap(args: EventData): void {
     const component = <GridLayout>args.object;
     const componentRoute = component.get("route");
     const componentTitle = component.get("title");
+    const gametype = componentTitle == 'Timed Game' ? 'timed' : 'casual';
     const bindingContext = <AppRootViewModel>component.bindingContext;
 
     bindingContext.selectedPage = componentTitle;
@@ -23,6 +24,9 @@ export function onNavigationItemTap(args: EventData): void {
         moduleName: componentRoute,
         transition: {
             name: "fade"
+        },
+        context: {
+            type: gametype
         }
     });
 

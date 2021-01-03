@@ -4,10 +4,11 @@ import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { SelectedPageService } from "../shared/selected-page-service";
 
 export class GameViewModel extends Observable {
-    constructor() {
+    constructor(gametype: string) {
         super();
 
-        SelectedPageService.getInstance().updateSelectedPage("Casual Game");
+        SelectedPageService.getInstance().updateSelectedPage(
+                gametype == 'timed' ? 'Timed Game' : 'Casual Game');
 
         this.set('selectedCell', -1);
         this.set('board', fromObject( {
